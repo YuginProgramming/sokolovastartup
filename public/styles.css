@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap");
+
+:root {
+  --bg: #191a1c;
+  --card: #24262b;
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #ffffff;
+  --muted: #b7b7c0;
+  --pink: #ff4d8d;
+  --grad: linear-gradient(90deg, #ff7a3c 0%, #8b5cff 100%);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+body {
+  background-image:
+    radial-gradient(420px 280px at 100% -10%, rgba(139, 92, 255, 0.28), transparent 60%),
+    radial-gradient(380px 240px at -10% 8%, rgba(255, 122, 60, 0.18), transparent 55%);
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: calc(18px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom));
+}
+
+h1 {
+  margin: 18px 0 12px;
+  font-size: 40px;
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 28px 0 8px;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+p { font-size: 17px; line-height: 1.45; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 28px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, #ff7a3c, #ff4d8d, #8b5cff, #ff7a3c);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.04);
+}
+
+.lead { color: var(--muted); margin-top: 0; }
+
+.perks {
+  list-style: none;
+  margin: 28px 0 32px;
+  padding: 0;
+}
+
+.perks li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.perks li:last-child { border-bottom: 1px solid var(--line); }
+
+.cta, .again, .option, .back {
+  font: inherit;
+  color: inherit;
+}
+
+.cta {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 18px 20px;
+  background: var(--grad);
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(139, 92, 255, 0.28);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.back {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.progress {
+  height: 4px;
+  margin: 14px 0 8px;
+  border-radius: 99px;
+  background: #34363c;
+  overflow: hidden;
+}
+
+.progress b {
+  display: block;
+  height: 100%;
+  background: var(--grad);
+}
+
+.ask { font-size: 32px; margin-bottom: 22px; }
+
+.options { display: grid; gap: 12px; }
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  padding: 16px 16px 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.option i {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #8d8d98;
+}
+
+.option.is-on {
+  border-color: #ff7a3c;
+}
+
+.option.is-on i {
+  border-color: transparent;
+  background: var(--grad);
+  box-shadow: inset 0 0 0 5px var(--card);
+}
+
+.hello {
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.type {
+  margin: 6px 0 12px;
+  font-size: 56px;
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+.line { font-weight: 700; margin-top: 0; }
+
+.evidence { color: var(--muted); }
+
+.bars { margin: 22px 0 8px; }
+
+.bar {
+  display: grid;
+  grid-template-columns: 7.4rem 1fr 1.2rem;
+  gap: 10px;
+  align-items: center;
+  margin: 11px 0;
+}
+
+.bar b { font-size: 16px; }
+
+.bar span {
+  display: block;
+  height: 8px;
+  border-radius: 99px;
+  background: #3a3c42;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: #f2f2f2;
+}
+
+.bar em {
+  font-style: normal;
+  font-weight: 800;
+  text-align: right;
+}
+
+.services {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.services li { margin: 8px 0; padding-left: 4px; }
+
+.result .cta { margin-top: 28px; }
+
+.again {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+}
